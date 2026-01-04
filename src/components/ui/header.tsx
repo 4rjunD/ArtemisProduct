@@ -14,7 +14,7 @@ import Link from "next/link";
 function Header1() {
     const navigationItems = [
         {
-            title: "The Science",
+            title: "How It Works",
             href: "#how-it-works",
         },
         {

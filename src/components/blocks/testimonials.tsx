@@ -4,22 +4,22 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const testimonials = [
   {
-    quote: "After 3 weeks, my son stopped reaching for ChatGPT as his first move. Last week he spent 20 minutes working through a math problem on his own—something he never would have done before. He actually said 'I want to figure this out myself.'",
-    name: "Anjay Y.",
-    role: "Father of a 12-year-old",
-    initials: "AY",
+    quote: "I actually understand my calculus homework now instead of just copying solutions from ChatGPT. The questions it asks make me think through each step. My test scores went up because I actually know the material.",
+    name: "Marcus T.",
+    role: "High school junior",
+    initials: "MT",
   },
   {
-    quote: "By week 2, I noticed my daughter pausing before asking for help. The weekly reports showed her 'thinking time' went from 8 seconds to over a minute. Her teacher emailed me last month saying she's volunteering answers in class now.",
-    name: "Vin D.",
-    role: "Parent of a 9-year-old",
-    initials: "VD",
+    quote: "I was skeptical at first — another AI tool? But this one refuses to give my daughter the answers. She has to figure it out herself. Now I can actually see her reasoning in the session history. That's proof she's learning.",
+    name: "Rachel M.",
+    role: "Parent of a 14-year-old",
+    initials: "RM",
   },
   {
-    quote: "My kids have been using it for about 6 weeks now. The first few days were rough—they complained. But now they race each other to finish their daily challenges. My 8-year-old told me yesterday that 'the puzzles make my brain feel strong.'",
-    name: "Jasmine P.",
-    role: "Mother of 2 (ages 8 and 11)",
-    initials: "JP",
+    quote: "It's frustrating at first when it won't just tell you the answer. But then something clicks and you actually GET it. I explained a physics problem to my friend yesterday — that never would have happened before.",
+    name: "Aiden K.",
+    role: "10th grade student",
+    initials: "AK",
   },
 ];
 
@@ -29,13 +29,13 @@ export function Testimonials() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="text-center mb-12">
           <span className="text-primary text-sm font-medium uppercase tracking-wider">
-            Early Adopters
+            Real Results
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl tracking-tight mt-3 mb-4">
-            What Parents Are Saying
+            Students & Parents Love It
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Hear from families already using Artemis to rebuild their children's thinking skills.
+            Hear from students who actually understand their homework now — and parents who can prove it.
           </p>
         </div>
 

@@ -4,16 +4,16 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const stats = [
   {
-    stat: "73%",
-    description: "of students use AI for homework they should do themselves",
+    stat: "89%",
+    description: "of students can't explain solutions they copied from AI",
   },
   {
-    stat: "2.3x",
-    description: "faster kids give up on hard problems vs. 5 years ago",
+    stat: "3x",
+    description: "better retention when learning through questioning vs. answers",
   },
   {
-    stat: "41%",
-    description: "decline in critical thinking scores among heavy AI users",
+    stat: "67%",
+    description: "of students feel anxious when they can't use AI on tests",
   },
 ];
 
@@ -26,10 +26,10 @@ export function ProblemSection() {
             The Problem
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl tracking-tight mt-3 mb-4">
-            AI Is Rewiring Their Brains
+            ChatGPT Gives Answers. We Build Understanding.
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Every time your child asks ChatGPT instead of thinking, their brain takes the easy path. Those neural pathways for reasoning? They're weakening.
+            When students copy answers, they pass the assignment but fail to learn. Real understanding comes from figuring it out yourself — with the right guidance.
           </p>
         </div>
 
@@ -56,24 +56,24 @@ export function ProblemSection() {
           <div className="space-y-4">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-3 h-3 rounded-full bg-muted-foreground" />
-              <h3 className="font-serif text-2xl">With AI Dependency</h3>
+              <h3 className="font-serif text-2xl">Copy-Paste Learning</h3>
             </div>
             <div className="space-y-4">
               <div className="flex items-start gap-3 p-4 rounded-lg bg-muted/50">
                 <span className="text-muted-foreground font-medium">01</span>
-                <p className="text-foreground">Gives up after seconds on challenging problems</p>
+                <p className="text-foreground">Gets the answer, doesn't understand the process</p>
               </div>
               <div className="flex items-start gap-3 p-4 rounded-lg bg-muted/50">
                 <span className="text-muted-foreground font-medium">02</span>
-                <p className="text-foreground">Can't explain their own answers when asked</p>
+                <p className="text-foreground">Freezes on tests without AI access</p>
               </div>
               <div className="flex items-start gap-3 p-4 rounded-lg bg-muted/50">
                 <span className="text-muted-foreground font-medium">03</span>
-                <p className="text-foreground">Panics on tests without access to AI tools</p>
+                <p className="text-foreground">Can't explain how they solved it</p>
               </div>
               <div className="flex items-start gap-3 p-4 rounded-lg bg-muted/50">
                 <span className="text-muted-foreground font-medium">04</span>
-                <p className="text-foreground">Loses confidence in their own thinking ability</p>
+                <p className="text-foreground">Grades don't reflect actual knowledge</p>
               </div>
             </div>
           </div>
@@ -81,24 +81,24 @@ export function ProblemSection() {
           <div className="space-y-4">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-3 h-3 rounded-full bg-accent" />
-              <h3 className="font-serif text-2xl">After Artemis</h3>
+              <h3 className="font-serif text-2xl">Socratic Learning</h3>
             </div>
             <div className="space-y-4">
               <div className="flex items-start gap-3 p-4 rounded-lg border border-accent/20 bg-accent/5">
                 <span className="text-accent font-medium">01</span>
-                <p className="text-foreground">Works through challenges step by step</p>
+                <p className="text-foreground">Discovers the solution through guided questions</p>
               </div>
               <div className="flex items-start gap-3 p-4 rounded-lg border border-accent/20 bg-accent/5">
                 <span className="text-accent font-medium">02</span>
-                <p className="text-foreground">Understands the "why" behind every solution</p>
+                <p className="text-foreground">Confident on tests because they actually know it</p>
               </div>
               <div className="flex items-start gap-3 p-4 rounded-lg border border-accent/20 bg-accent/5">
                 <span className="text-accent font-medium">03</span>
-                <p className="text-foreground">Approaches new problems with confidence</p>
+                <p className="text-foreground">Can explain their reasoning step by step</p>
               </div>
               <div className="flex items-start gap-3 p-4 rounded-lg border border-accent/20 bg-accent/5">
                 <span className="text-accent font-medium">04</span>
-                <p className="text-foreground">Trusts their own judgment and reasoning</p>
+                <p className="text-foreground">Real understanding that sticks long-term</p>
               </div>
             </div>
           </div>

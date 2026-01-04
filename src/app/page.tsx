@@ -22,17 +22,17 @@ export default function Home() {
       <BackgroundPathsWrapper>
       <HeroSection
         badge={{
-          text: "Now in Early Access",
+          text: "STEM Tutoring That Actually Teaches",
           action: {
-            text: "Learn More",
+            text: "See How",
             href: "#how-it-works",
           },
         }}
-        title="Your Child's Brain Is Getting Weaker. We Can Fix That."
-        description="AI dependency is eroding their ability to think. Artemis rebuilds it. For ages 6-18."
+        title="Stop Getting Answers. Start Understanding."
+        description="The AI tutor that never gives you the answer — it helps you figure it out yourself. Math & Science, any level."
         actions={[
           {
-            text: "Get Started",
+            text: "Start Learning Free",
             href: "/login",
             variant: "glow",
           },

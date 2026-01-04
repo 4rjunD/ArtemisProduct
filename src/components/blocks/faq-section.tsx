@@ -9,49 +9,49 @@ import {
 
 const faqs = [
   {
-    question: "How much time does Artemis take each day?",
+    question: "How is this different from ChatGPT?",
     answer:
-      "Each session is 10-15 minutes. That's it. We've found this is the sweet spot—long enough to build real cognitive skills, short enough that kids don't burn out or resist. Most families do one session after school or before bed.",
+      "ChatGPT gives you the answer. Artemis never does. Instead, we ask strategic questions that guide you to discover the solution yourself. It's the Socratic method — the same way great teachers have taught for 2,400 years. You learn by figuring it out, not by copying.",
   },
   {
-    question: "What if my child refuses to do it or finds it boring?",
+    question: "What subjects do you cover?",
     answer:
-      "The first few days are the hardest. We recommend sitting with them for the first 2-3 sessions. After that, something clicks—they start wanting to 'beat' the challenges. If your child still resists after a week, we'll refund you fully. But honestly, most kids get hooked once they feel themselves getting better at the problems.",
+      "We focus on STEM: Math (algebra, geometry, calculus, statistics) and Science (physics, chemistry, biology). These are subjects where understanding the 'why' matters most. We're adding more subjects based on user feedback.",
   },
   {
-    question: "What does a typical exercise look like?",
+    question: "How do I use it for homework?",
     answer:
-      "Exercises are reasoning puzzles—not trivia, not memorization. Your child might see a logic problem and get guided through it with questions like 'What do you notice first?' and 'What happens if you try the opposite?' We never give answers. We only ask questions that lead them to discover the answer themselves.",
+      "Paste any homework problem into Artemis. Our AI reads the problem and starts asking you guiding questions. 'What do you already know about this?' 'What would happen if you tried this approach?' You work through it step by step until you understand the solution — then you explain it back to prove you got it.",
   },
   {
-    question: "How is this different from other educational apps?",
+    question: "Will this actually help my grades?",
     answer:
-      "Most apps give answers or make learning 'fun' with games and rewards. Artemis does the opposite: it makes kids work for understanding. The satisfaction comes from genuine mental effort, not points or badges. The goal isn't entertainment—it's rebuilding their ability to reason independently.",
+      "Yes, because you'll actually understand the material. When you figure something out yourself, you remember it. That's the difference on test day — you're not trying to recall something you copied, you're using knowledge you built yourself.",
   },
   {
-    question: "What age is Artemis designed for?",
+    question: "Can my teacher tell I used this?",
     answer:
-      "Artemis works for children ages 6-18. The exercises automatically adjust difficulty based on your child's age and current reasoning level. Younger kids get more visual, concrete problems. Older kids tackle abstract reasoning and logic.",
+      "This IS learning. Unlike ChatGPT which does your homework for you, Artemis helps you understand so you can do it yourself. Your work is 100% your own thinking — we just asked the questions that got you there. Teachers want students who understand. That's what we help you become.",
   },
   {
-    question: "How long until I see results?",
+    question: "What if I just want the answer?",
     answer:
-      "Most parents notice behavioral changes within 2-3 weeks—kids start trying harder before asking for help. You'll see it in small moments: they'll pause before reaching for ChatGPT, or they'll talk through a problem out loud. Full cognitive rebuilding typically takes 3-6 months of consistent use.",
+      "That's what ChatGPT is for. We're for students who want to actually understand. It's frustrating at first when we won't just tell you — but that frustration is the feeling of your brain working. And when you figure it out yourself? That's real learning.",
   },
   {
-    question: "What do the progress reports show?",
+    question: "How do parents track progress?",
     answer:
-      "Weekly reports show your child's reasoning patterns: where they're improving, where they're struggling, and how their confidence is changing. You'll see metrics like 'time spent thinking before answering' and 'problems solved without hints.' It's a window into how their brain is developing.",
+      "Parents get a full dashboard showing: every session completed, which concepts were covered, how the student's understanding improved, and what topics need more practice. You'll see the actual chat history — proof your student is thinking, not just copying.",
   },
   {
-    question: "Is my child's data safe?",
+    question: "Is my data safe?",
     answer:
-      "Yes. We take children's privacy seriously. We never sell data, never show ads, and all information is stored securely. You can delete all data at any time from your parent dashboard.",
+      "Yes. We never sell data, never show ads, and all information is encrypted. Session history is only visible to students and linked parent accounts. You can delete all data anytime from your dashboard.",
   },
   {
-    question: "What if it doesn't work for my child?",
+    question: "Can I cancel anytime?",
     answer:
-      "We offer a 30-day money-back guarantee, no questions asked. If you don't see any improvement—or if your child just doesn't engage with it—email us and we'll refund you fully. We only want to keep customers whose kids are actually benefiting.",
+      "Yes. Cancel anytime with one click. Plus we offer a 30-day money-back guarantee — if Artemis isn't helping you learn, email us for a full refund. No questions asked.",
   },
 ];
 
@@ -64,10 +64,10 @@ export function FAQSection() {
             FAQ
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl tracking-tight mt-3 mb-4">
-            Questions Parents Ask
+            Common Questions
           </h2>
           <p className="text-muted-foreground text-lg">
-            Everything you need to know before getting started.
+            Everything you need to know about learning with Artemis.
           </p>
         </div>
 

@@ -5,14 +5,11 @@ import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { LogOut, User, BookOpen, TrendingUp, Clock, Search, ChevronRight, Lock, Sparkles, BarChart3, Brain, Flame } from "lucide-react";
-import { useMetrics } from "@/components/providers/metrics-provider";
-import { getIQLabel } from "@/lib/artemis-iq";
+import { LogOut, User, BookOpen, Clock, ChevronRight, Sparkles, BarChart3, MessageCircleQuestion, Calculator, FlaskConical } from "lucide-react";
 
 export default function DashboardPage() {
   const { data: session, status } = useSession();
   const router = useRouter();
-  const { profile, isLoading: metricsLoading } = useMetrics();
 
   useEffect(() => {
     if (status === "unauthenticated") {
@@ -31,49 +28,6 @@ export default function DashboardPage() {
   if (!session) {
     return null;
   }
-
-  const games = [
-    {
-      id: "detective",
-      title: "Detective's Notebook",
-      description: "Solve mysteries by gathering clues, questioning suspects, and using logical reasoning.",
-      icon: "🔍",
-      skills: ["Critical Thinking", "Evidence Evaluation", "Logical Reasoning"],
-      href: "/dashboard/detective",
-      isAvailable: true,
-      isNew: true,
-    },
-    {
-      id: "story-quest",
-      title: "Story Quest",
-      description: "Navigate branching adventure stories where your choices and reasoning matter.",
-      icon: "📖",
-      skills: ["Decision Making", "Consequence Thinking"],
-      href: "/dashboard/story-quest",
-      isAvailable: true,
-      isNew: true,
-    },
-    {
-      id: "debate-arena",
-      title: "Debate Arena",
-      description: "Learn to argue both sides of an issue and build strong, balanced arguments.",
-      icon: "⚖️",
-      skills: ["Perspective Taking", "Argument Building"],
-      href: "/dashboard/debate",
-      isAvailable: true,
-      isNew: true,
-    },
-    {
-      id: "fact-fiction",
-      title: "Fact or Fiction",
-      description: "Spot misinformation and learn to evaluate sources and claims.",
-      icon: "📰",
-      skills: ["Bias Awareness", "Source Evaluation"],
-      href: "/dashboard/fact-fiction",
-      isAvailable: true,
-      isNew: true,
-    },
-  ];
 
   return (
     <div className="min-h-screen bg-background">
@@ -108,74 +62,63 @@ export default function DashboardPage() {
             Welcome back, {session.user?.name?.split(" ")[0] || "there"}!
           </h2>
           <p className="text-muted-foreground">
-            Ready to strengthen your thinking skills? Choose an activity below.
+            Ready to learn? I'll help you understand — without giving you the answers.
           </p>
         </div>
 
-        {/* ArtemisIQ Banner */}
-        {!metricsLoading && (
-          <div className="bg-gradient-to-r from-primary/20 via-primary/10 to-transparent border border-primary/20 rounded-xl p-6 mb-8">
-            <div className="flex flex-col sm:flex-row items-center gap-6">
-              <div className="flex items-center gap-4">
-                <div className="w-20 h-20 rounded-full bg-background border-2 border-primary flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-foreground">{profile.overallIQ}</div>
-                    <div className="text-xs text-muted-foreground">IQ</div>
-                  </div>
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-foreground flex items-center gap-2">
-                    <Brain className="h-5 w-5 text-primary" />
-                    ArtemisIQ
-                  </h3>
-                  <p className={`text-sm font-medium ${getIQLabel(profile.overallIQ).color}`}>
-                    {getIQLabel(profile.overallIQ).label}
-                  </p>
-                </div>
-              </div>
-              <div className="flex-1 flex flex-wrap gap-4 justify-center sm:justify-end">
-                {profile.currentStreak > 0 && (
-                  <div className="flex items-center gap-2 bg-background/50 rounded-full px-4 py-2">
-                    <Flame className="h-4 w-4 text-orange-500" />
-                    <span className="text-sm font-medium">{profile.currentStreak} day streak</span>
-                  </div>
-                )}
-                <Button variant="outline" size="sm" asChild>
-                  <Link href="/dashboard/parent">
-                    <BarChart3 className="h-4 w-4 mr-2" />
-                    Parent Dashboard
+        {/* Main CTA - Start Tutoring */}
+        <div className="bg-gradient-to-br from-primary/20 via-primary/10 to-transparent border border-primary/20 rounded-xl p-8 mb-8">
+          <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
+            <div className="w-20 h-20 rounded-full bg-background border-2 border-primary flex items-center justify-center shrink-0">
+              <MessageCircleQuestion className="h-10 w-10 text-primary" />
+            </div>
+            <div className="flex-1">
+              <h3 className="text-2xl font-serif text-foreground mb-2">
+                Start Learning
+              </h3>
+              <p className="text-muted-foreground mb-4">
+                Paste any Math or Science homework problem. I'll guide you to the solution through questions — never giving you the answer directly.
+              </p>
+              <div className="flex flex-wrap items-center gap-4">
+                <Button variant="glow" size="lg" asChild>
+                  <Link href="/dashboard/tutor">
+                    <Sparkles className="h-4 w-4 mr-2" />
+                    Open Tutor
                   </Link>
                 </Button>
+                <span className="text-sm text-muted-foreground">
+                  The Socratic method — learn by thinking
+                </span>
               </div>
             </div>
           </div>
-        )}
+        </div>
 
-        {/* Stats cards */}
+        {/* Quick Stats */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           <div className="bg-card border border-border rounded-xl p-6">
             <div className="flex items-center gap-3 mb-4">
               <div className="p-2 rounded-lg bg-primary/10">
                 <BookOpen className="h-5 w-5 text-primary" />
               </div>
-              <h3 className="font-medium text-foreground">Games Completed</h3>
+              <h3 className="font-medium text-foreground">Sessions</h3>
             </div>
-            <p className="text-3xl font-semibold text-foreground">{profile.totalGamesPlayed}</p>
+            <p className="text-3xl font-semibold text-foreground">0</p>
             <p className="text-sm text-muted-foreground mt-1">
-              {profile.totalGamesPlayed === 0 ? "Play your first game!" : `${profile.skillScores.length} skills tracked`}
+              Start your first session!
             </p>
           </div>
 
           <div className="bg-card border border-border rounded-xl p-6">
             <div className="flex items-center gap-3 mb-4">
               <div className="p-2 rounded-lg bg-accent/10">
-                <TrendingUp className="h-5 w-5 text-accent" />
+                <Calculator className="h-5 w-5 text-accent" />
               </div>
-              <h3 className="font-medium text-foreground">ArtemisIQ</h3>
+              <h3 className="font-medium text-foreground">Subjects</h3>
             </div>
-            <p className="text-3xl font-semibold text-foreground">{profile.overallIQ}</p>
-            <p className={`text-sm mt-1 ${getIQLabel(profile.overallIQ).color}`}>
-              {getIQLabel(profile.overallIQ).label}
+            <p className="text-3xl font-semibold text-foreground">2</p>
+            <p className="text-sm text-muted-foreground mt-1">
+              Math & Science
             </p>
           </div>
 
@@ -184,114 +127,83 @@ export default function DashboardPage() {
               <div className="p-2 rounded-lg bg-primary/10">
                 <Clock className="h-5 w-5 text-primary" />
               </div>
-              <h3 className="font-medium text-foreground">Time Practiced</h3>
+              <h3 className="font-medium text-foreground">Time Learning</h3>
             </div>
-            <p className="text-3xl font-semibold text-foreground">{profile.totalTimePracticed} min</p>
+            <p className="text-3xl font-semibold text-foreground">0 min</p>
             <p className="text-sm text-muted-foreground mt-1">
-              {profile.longestStreak > 0 ? `Best streak: ${profile.longestStreak} days` : "Start practicing!"}
+              Track your progress
             </p>
           </div>
         </div>
 
-        {/* Thinking Activities */}
+        {/* Subject Cards */}
         <div className="mb-8">
-          <div className="flex items-center justify-between mb-6">
-            <div>
-              <h3 className="text-xl font-semibold text-foreground flex items-center gap-2">
-                <Sparkles className="h-5 w-5 text-primary" />
-                Thinking Activities
-              </h3>
-              <p className="text-sm text-muted-foreground mt-1">
-                Games designed to build critical thinking skills
-              </p>
-            </div>
-          </div>
-
+          <h3 className="text-xl font-semibold text-foreground mb-4">
+            Subjects Covered
+          </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {games.map((game) => (
-              <div
-                key={game.id}
-                className={`bg-card border rounded-xl overflow-hidden transition-all duration-200 ${
-                  game.isAvailable
-                    ? "border-border hover:border-primary/50 hover:shadow-lg"
-                    : "border-border opacity-60"
-                }`}
-              >
-                <div className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="text-4xl">{game.icon}</div>
-                    <div className="flex-1">
-                      <div className="flex items-center gap-2 mb-1">
-                        <h4 className="text-lg font-semibold text-foreground">{game.title}</h4>
-                        {game.isNew && (
-                          <span className="bg-primary text-primary-foreground text-xs px-2 py-0.5 rounded-full font-medium">
-                            NEW
-                          </span>
-                        )}
-                        {!game.isAvailable && (
-                          <span className="bg-muted text-muted-foreground text-xs px-2 py-0.5 rounded-full font-medium flex items-center gap-1">
-                            <Lock className="h-3 w-3" />
-                            Coming Soon
-                          </span>
-                        )}
-                      </div>
-                      <p className="text-sm text-muted-foreground mb-4">{game.description}</p>
-
-                      {/* Skills */}
-                      <div className="flex flex-wrap gap-2 mb-4">
-                        {game.skills.map((skill) => (
-                          <span
-                            key={skill}
-                            className="bg-muted text-muted-foreground text-xs px-2 py-1 rounded-full"
-                          >
-                            {skill}
-                          </span>
-                        ))}
-                      </div>
-
-                      {game.isAvailable ? (
-                        <Button variant="glow" asChild>
-                          <Link href={game.href}>
-                            Play Now
-                            <ChevronRight className="h-4 w-4 ml-1" />
-                          </Link>
-                        </Button>
-                      ) : (
-                        <Button variant="outline" disabled>
-                          <Lock className="h-4 w-4 mr-2" />
-                          Coming Soon
-                        </Button>
-                      )}
-                    </div>
-                  </div>
+            <div className="bg-card border border-border rounded-xl p-6 hover:border-primary/50 transition-colors">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center shrink-0">
+                  <Calculator className="h-6 w-6 text-blue-500" />
+                </div>
+                <div className="flex-1">
+                  <h4 className="text-lg font-semibold text-foreground mb-1">Mathematics</h4>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    Algebra, Geometry, Calculus, Trigonometry, Statistics
+                  </p>
+                  <Button variant="outline" size="sm" asChild>
+                    <Link href="/dashboard/tutor">
+                      Start Math Session
+                      <ChevronRight className="h-4 w-4 ml-1" />
+                    </Link>
+                  </Button>
                 </div>
               </div>
-            ))}
+            </div>
+
+            <div className="bg-card border border-border rounded-xl p-6 hover:border-primary/50 transition-colors">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-lg bg-green-500/10 flex items-center justify-center shrink-0">
+                  <FlaskConical className="h-6 w-6 text-green-500" />
+                </div>
+                <div className="flex-1">
+                  <h4 className="text-lg font-semibold text-foreground mb-1">Science</h4>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    Physics, Chemistry, Biology
+                  </p>
+                  <Button variant="outline" size="sm" asChild>
+                    <Link href="/dashboard/tutor">
+                      Start Science Session
+                      <ChevronRight className="h-4 w-4 ml-1" />
+                    </Link>
+                  </Button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Featured Activity */}
-        <div className="bg-gradient-to-br from-primary/10 via-primary/5 to-transparent border border-primary/20 rounded-xl p-6 sm:p-8">
-          <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
-            <div className="text-6xl">🔍</div>
-            <div className="flex-1">
-              <h3 className="text-xl font-semibold text-foreground mb-2">
-                Start with Detective&apos;s Notebook
-              </h3>
-              <p className="text-muted-foreground mb-4">
-                Our most popular activity! Solve mysteries by gathering clues and using logical reasoning.
-                Perfect for building critical thinking skills in a fun, engaging way.
-              </p>
-              <div className="flex flex-wrap items-center gap-4">
-                <Button variant="glow" size="lg" asChild>
-                  <Link href="/dashboard/detective">
-                    <Search className="h-4 w-4 mr-2" />
-                    Start Investigating
-                  </Link>
-                </Button>
-                <span className="text-sm text-muted-foreground">10-15 min per case</span>
+        {/* Parent Dashboard Link */}
+        <div className="bg-muted/50 border border-border rounded-xl p-6">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div className="flex items-center gap-3">
+              <div className="p-2 rounded-lg bg-background">
+                <BarChart3 className="h-5 w-5 text-primary" />
+              </div>
+              <div>
+                <h4 className="font-medium text-foreground">Parent Dashboard</h4>
+                <p className="text-sm text-muted-foreground">
+                  View learning progress and session history
+                </p>
               </div>
             </div>
+            <Button variant="outline" asChild>
+              <Link href="/dashboard/parent">
+                View Dashboard
+                <ChevronRight className="h-4 w-4 ml-1" />
+              </Link>
+            </Button>
           </div>
         </div>
       </main>

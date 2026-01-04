@@ -1,6 +1,6 @@
 "use client";
 
-import { TrendingUp, Clock, Brain, Target } from "lucide-react";
+import { TrendingUp, Clock, BookOpen, Target } from "lucide-react";
 
 export function SampleReport() {
   return (
@@ -11,10 +11,10 @@ export function SampleReport() {
             Parent Dashboard
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl tracking-tight mt-3 mb-4">
-            See Inside Their Progress
+            See Their Learning in Action
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Every week, you'll get a clear picture of how your child's thinking is developing.
+            Every session is recorded. Watch your student's understanding grow with real data.
           </p>
         </div>
 
@@ -25,12 +25,12 @@ export function SampleReport() {
             <div className="bg-primary/5 border-b border-border px-6 py-4">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm text-muted-foreground">Weekly Progress Report</p>
-                  <p className="font-serif text-xl text-foreground">Emma's Week 4 Summary</p>
+                  <p className="text-sm text-muted-foreground">Weekly Learning Report</p>
+                  <p className="font-serif text-xl text-foreground">Marcus's Progress</p>
                 </div>
                 <div className="text-right">
-                  <p className="text-sm text-muted-foreground">Dec 15 - Dec 21</p>
-                  <p className="text-sm font-medium text-primary">5 of 7 days active</p>
+                  <p className="text-sm text-muted-foreground">This Week</p>
+                  <p className="text-sm font-medium text-primary">12 sessions completed</p>
                 </div>
               </div>
             </div>
@@ -39,35 +39,35 @@ export function SampleReport() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-6 border-b border-border">
               <div className="text-center p-4 bg-muted/30 rounded-xl">
                 <div className="flex justify-center mb-2">
-                  <Clock className="w-5 h-5 text-primary" />
+                  <BookOpen className="w-5 h-5 text-primary" />
                 </div>
-                <p className="text-2xl font-bold text-foreground">47s</p>
-                <p className="text-xs text-muted-foreground">Avg. thinking time</p>
-                <p className="text-xs text-green-600 mt-1">+12s from last week</p>
-              </div>
-              <div className="text-center p-4 bg-muted/30 rounded-xl">
-                <div className="flex justify-center mb-2">
-                  <Brain className="w-5 h-5 text-primary" />
-                </div>
-                <p className="text-2xl font-bold text-foreground">23</p>
-                <p className="text-xs text-muted-foreground">Challenges completed</p>
-                <p className="text-xs text-green-600 mt-1">+5 from last week</p>
+                <p className="text-2xl font-bold text-foreground">8</p>
+                <p className="text-xs text-muted-foreground">Topics mastered</p>
+                <p className="text-xs text-green-600 mt-1">+3 this week</p>
               </div>
               <div className="text-center p-4 bg-muted/30 rounded-xl">
                 <div className="flex justify-center mb-2">
                   <Target className="w-5 h-5 text-primary" />
                 </div>
-                <p className="text-2xl font-bold text-foreground">78%</p>
-                <p className="text-xs text-muted-foreground">Solved without hints</p>
-                <p className="text-xs text-green-600 mt-1">+8% from last week</p>
+                <p className="text-2xl font-bold text-foreground">87%</p>
+                <p className="text-xs text-muted-foreground">Understanding rate</p>
+                <p className="text-xs text-green-600 mt-1">+12% from last week</p>
+              </div>
+              <div className="text-center p-4 bg-muted/30 rounded-xl">
+                <div className="flex justify-center mb-2">
+                  <Clock className="w-5 h-5 text-primary" />
+                </div>
+                <p className="text-2xl font-bold text-foreground">2.4h</p>
+                <p className="text-xs text-muted-foreground">Time learning</p>
+                <p className="text-xs text-green-600 mt-1">Avg 20 min/session</p>
               </div>
               <div className="text-center p-4 bg-muted/30 rounded-xl">
                 <div className="flex justify-center mb-2">
                   <TrendingUp className="w-5 h-5 text-primary" />
                 </div>
-                <p className="text-2xl font-bold text-foreground">Level 4</p>
-                <p className="text-xs text-muted-foreground">Current difficulty</p>
-                <p className="text-xs text-green-600 mt-1">Advanced from L3</p>
+                <p className="text-2xl font-bold text-foreground">Algebra</p>
+                <p className="text-xs text-muted-foreground">Top subject</p>
+                <p className="text-xs text-green-600 mt-1">Strong progress</p>
               </div>
             </div>
 
@@ -79,7 +79,7 @@ export function SampleReport() {
                   <div className="w-2 h-2 rounded-full bg-green-500 mt-2 shrink-0" />
                   <div>
                     <p className="text-foreground text-sm">
-                      <strong>Improved persistence:</strong> Emma is spending more time on difficult problems before asking for guidance. Her give-up rate dropped from 34% to 18%.
+                      <strong>Quadratic equations:</strong> Marcus figured out the quadratic formula through guided questioning. He can now explain why it works, not just how to use it.
                     </p>
                   </div>
                 </div>
@@ -87,7 +87,7 @@ export function SampleReport() {
                   <div className="w-2 h-2 rounded-full bg-blue-500 mt-2 shrink-0" />
                   <div>
                     <p className="text-foreground text-sm">
-                      <strong>Pattern recognition growing:</strong> She's recognizing similar problem types faster. This week she connected a logic puzzle to one she solved 2 weeks ago.
+                      <strong>Physics momentum:</strong> Started connecting math concepts to physics problems. Understanding how formulas relate across subjects.
                     </p>
                   </div>
                 </div>
@@ -95,7 +95,7 @@ export function SampleReport() {
                   <div className="w-2 h-2 rounded-full bg-amber-500 mt-2 shrink-0" />
                   <div>
                     <p className="text-foreground text-sm">
-                      <strong>Area to watch:</strong> Abstract reasoning problems still take longer. Consider encouraging verbal explanation of her thought process.
+                      <strong>Needs practice:</strong> Word problems still take longer to parse. Recommend more sessions on translating text to equations.
                     </p>
                   </div>
                 </div>
@@ -105,7 +105,7 @@ export function SampleReport() {
             {/* Footer */}
             <div className="bg-muted/50 px-6 py-4 text-center">
               <p className="text-sm text-muted-foreground">
-                Sample report. Actual reports are personalized to your child's progress.
+                Sample report. Actual reports show your student's real session history and progress.
               </p>
             </div>
           </div>

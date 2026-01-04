@@ -22,12 +22,12 @@ const defaultTiers: PricingTier[] = [
         icon: <Brain className="w-6 h-6" />,
         monthlyPrice: 15,
         yearlyPrice: 12,
-        description: "Perfect for getting started",
+        description: "Perfect for one student",
         features: [
-            "1 child profile",
-            "Daily cognitive exercises",
-            "Weekly progress reports",
-            "Basic reasoning analytics",
+            "1 student account",
+            "Unlimited STEM tutoring",
+            "Math & Science coverage",
+            "Session history",
             "Email support",
         ],
         color: "blue",
@@ -37,12 +37,12 @@ const defaultTiers: PricingTier[] = [
         icon: <Sparkles className="w-6 h-6" />,
         monthlyPrice: 29,
         yearlyPrice: 24,
-        description: "For families with multiple kids",
+        description: "For families with multiple students",
         features: [
-            "Up to 2 children",
-            "Personalized difficulty calibration",
-            "Advanced reasoning and confidence tracking",
-            "Parent insight dashboard",
+            "Up to 3 students",
+            "Full parent dashboard",
+            "Progress tracking & insights",
+            "Understanding metrics",
             "Priority support",
         ],
         popular: true,
@@ -53,14 +53,14 @@ const defaultTiers: PricingTier[] = [
         icon: <Users className="w-6 h-6" />,
         monthlyPrice: 49,
         yearlyPrice: 40,
-        description: "For families who want full visibility",
+        description: "Full family learning suite",
         features: [
-            "Unlimited children",
-            "Custom learning paths",
-            "Deep reasoning and behavior insights",
-            "Family level dashboard",
-            "Monthly progress summary",
-            "Direct onboarding support",
+            "Unlimited students",
+            "Advanced analytics",
+            "Concept mastery tracking",
+            "Weekly progress reports",
+            "Dedicated support",
+            "Early access to new subjects",
         ],
         color: "emerald",
     },
@@ -68,7 +68,7 @@ const defaultTiers: PricingTier[] = [
 
 function CreativePricing({
     tag = "Simple Pricing",
-    title = "Invest in Their Future. Not Another App.",
+    title = "Invest in Real Understanding",
     description = "Cancel anytime. 30-day money-back guarantee.",
     tiers = defaultTiers,
 }: {
@@ -251,7 +251,7 @@ function CreativePricing({
                         30-Day Money-Back Guarantee
                     </h3>
                     <p className="text-muted-foreground leading-relaxed">
-                        Try Artemis risk-free. If you don't see your child thinking more independently within 30 days—or if it's just not the right fit—email us and we'll refund every penny. No hoops, no hassle.
+                        Try Artemis risk-free. If you don't see real improvement in understanding within 30 days—or if it's just not the right fit—email us and we'll refund every penny. No hoops, no hassle.
                     </p>
                 </div>
             </div>

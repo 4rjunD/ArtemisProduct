@@ -8,10 +8,10 @@ export function CTASection() {
     <section className="py-16 md:py-24 bg-primary">
       <div className="mx-auto max-w-4xl px-6 text-center">
         <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl tracking-tight text-primary-foreground mb-4">
-          Every Day You Wait, The Habit Gets Stronger
+          Your Next Homework Assignment — Learn It, Don't Copy It
         </h2>
         <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto mb-8">
-          AI dependency compounds. The neural pathways for independent thinking weaken with each shortcut. Start rebuilding today.
+          Stop getting answers you can't explain. Start building understanding that lasts. Try it free for your next STEM problem.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button
@@ -21,7 +21,7 @@ export function CTASection() {
             asChild
           >
             <a href="/login">
-              Get Started
+              Start Learning Free
               <ArrowRight className="w-4 h-4" />
             </a>
           </Button>

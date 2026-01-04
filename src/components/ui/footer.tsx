@@ -50,9 +50,9 @@ export function Footer() {
       {/* Email capture section */}
       <div className="bg-muted/50 py-12">
         <div className="max-w-xl mx-auto px-6 text-center">
-          <h3 className="font-serif text-2xl mb-2">Stay Ahead of the AI Curve</h3>
+          <h3 className="font-serif text-2xl mb-2">Get STEM Learning Tips</h3>
           <p className="text-muted-foreground text-sm mb-6">
-            Weekly insights on childhood cognitive development in the AI age. No spam, unsubscribe anytime.
+            Weekly tips on helping students build real understanding. No spam, unsubscribe anytime.
           </p>
           {status === "success" ? (
             <p className="text-accent font-medium py-3">Thanks for subscribing!</p>
@@ -83,7 +83,7 @@ export function Footer() {
             <span className="font-serif text-xl tracking-tight">Artemis</span>
           </Link>
           <p className="text-sm text-muted-foreground">
-            The antidote to AI dependency. Rebuilding young minds, one exercise at a time.
+            The Socratic AI tutor. Building real understanding, one question at a time.
           </p>
         </div>
         <div className="flex gap-12 mt-8 md:mt-0">
@@ -113,7 +113,7 @@ export function Footer() {
         <div className="absolute inset-0 bg-gradient-to-t from-transparent to-background z-10 from-40%" />
         <div className="absolute inset-0 mx-6">
           <FlickeringGrid
-            text={tablet ? "Artemis" : "Reclaim their brain"}
+            text={tablet ? "Artemis" : "Learn by thinking"}
             fontSize={tablet ? 60 : 80}
             className="h-full w-full"
             squareSize={2}

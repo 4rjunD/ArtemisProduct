@@ -1,25 +1,36 @@
 import { Card, CardContent } from '@/components/ui/card'
-import { Brain, Users, Lightbulb, TrendingUp } from 'lucide-react'
+import { Brain, Users, MessageCircleQuestion, BookOpen, TrendingUp } from 'lucide-react'
 
 export function Features() {
     return (
-        <section id="how-it-works" className="py-16 md:py-32">
+        <section className="py-16 md:py-32">
             <div className="mx-auto max-w-5xl px-6">
                 <div className="text-center mb-12">
-                    <span className="text-primary text-sm font-medium uppercase tracking-wider">The Science</span>
-                    <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl tracking-tight mt-3 mb-4">How Artemis Rebuilds Their Brain</h2>
-                    <p className="text-muted-foreground text-lg max-w-2xl mx-auto">A proven system that reverses cognitive dependency and restores independent thinking.</p>
+                    <span className="text-primary text-sm font-medium uppercase tracking-wider">The Method</span>
+                    <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl tracking-tight mt-3 mb-4">How Socratic Tutoring Works</h2>
+                    <p className="text-muted-foreground text-lg max-w-2xl mx-auto">A 2,400-year-old teaching method powered by modern AI. Questions that guide, never answers that shortcut.</p>
                 </div>
                 <div className="relative">
                     <div className="relative z-10 grid grid-cols-6 gap-3">
                         <Card className="relative col-span-full overflow-hidden sm:col-span-3 lg:col-span-2">
                             <CardContent className="pt-6">
                                 <div className="relative mx-auto flex aspect-square size-32 rounded-full border before:absolute before:-inset-2 before:rounded-full before:border dark:border-white/10 dark:before:border-white/5">
-                                    <Lightbulb className="m-auto size-16 text-primary" strokeWidth={1} />
+                                    <MessageCircleQuestion className="m-auto size-16 text-primary" strokeWidth={1} />
                                 </div>
                                 <div className="relative z-10 mt-6 space-y-2 text-center">
-                                    <h2 className="text-lg font-medium transition dark:text-white">Restore Critical Thinking</h2>
-                                    <p className="text-muted-foreground">AI gives instant answers. Artemis makes kids discover the "why" behind every problem.</p>
+                                    <h2 className="text-lg font-medium transition dark:text-white">Never Gives Direct Answers</h2>
+                                    <p className="text-muted-foreground">Our AI asks strategic questions that guide your thinking. You discover the solution yourself.</p>
+                                </div>
+                            </CardContent>
+                        </Card>
+                        <Card className="relative col-span-full overflow-hidden sm:col-span-3 lg:col-span-2">
+                            <CardContent className="pt-6">
+                                <div className="relative mx-auto flex aspect-square size-32 rounded-full border before:absolute before:-inset-2 before:rounded-full before:border dark:border-white/10 dark:before:border-white/5">
+                                    <BookOpen className="m-auto size-16 text-primary" strokeWidth={1} />
+                                </div>
+                                <div className="relative z-10 mt-6 space-y-2 text-center">
+                                    <h2 className="text-lg font-medium transition dark:text-white">Works on Real Homework</h2>
+                                    <p className="text-muted-foreground">Paste any Math or Science problem. Get guided help on your actual assignments, not generic examples.</p>
                                 </div>
                             </CardContent>
                         </Card>
@@ -29,19 +40,8 @@ export function Features() {
                                     <Brain className="m-auto size-16 text-primary" strokeWidth={1} />
                                 </div>
                                 <div className="relative z-10 mt-6 space-y-2 text-center">
-                                    <h2 className="text-lg font-medium transition dark:text-white">Strengthen Problem Solving</h2>
-                                    <p className="text-muted-foreground">When AI does the work, kids lose the ability to break down challenges. We retrain that skill.</p>
-                                </div>
-                            </CardContent>
-                        </Card>
-                        <Card className="relative col-span-full overflow-hidden sm:col-span-3 lg:col-span-2">
-                            <CardContent className="pt-6">
-                                <div className="relative mx-auto flex aspect-square size-32 rounded-full border before:absolute before:-inset-2 before:rounded-full before:border dark:border-white/10 dark:before:border-white/5">
-                                    <TrendingUp className="m-auto size-16 text-primary" strokeWidth={1} />
-                                </div>
-                                <div className="relative z-10 mt-6 space-y-2 text-center">
-                                    <h2 className="text-lg font-medium transition dark:text-white">Build Decision Confidence</h2>
-                                    <p className="text-muted-foreground">Kids who rely on AI lose trust in their own judgment. We help them own their choices.</p>
+                                    <h2 className="text-lg font-medium transition dark:text-white">Builds Real Understanding</h2>
+                                    <p className="text-muted-foreground">When you figure it out yourself, you actually remember it. That's the difference on test day.</p>
                                 </div>
                             </CardContent>
                         </Card>
@@ -49,11 +49,11 @@ export function Features() {
                             <CardContent className="grid pt-6 sm:grid-cols-2">
                                 <div className="relative z-10 flex flex-col justify-between space-y-12 lg:space-y-6">
                                     <div className="relative flex aspect-square size-12 rounded-full border before:absolute before:-inset-2 before:rounded-full before:border dark:border-white/10 dark:before:border-white/5">
-                                        <Brain className="m-auto size-5" strokeWidth={1} />
+                                        <TrendingUp className="m-auto size-5" strokeWidth={1} />
                                     </div>
                                     <div className="space-y-2">
-                                        <h2 className="text-lg font-medium text-zinc-800 transition dark:text-white">Track Their Progress</h2>
-                                        <p className="text-muted-foreground">Weekly reports show exactly how their reasoning is improving. Real data, not guesswork.</p>
+                                        <h2 className="text-lg font-medium text-zinc-800 transition dark:text-white">Tracks Your Progress</h2>
+                                        <p className="text-muted-foreground">See which concepts you've mastered and where you need more practice. Real data on your learning.</p>
                                     </div>
                                 </div>
                                 <div className="rounded-tl-(--radius) relative -mb-6 -mr-6 mt-6 h-fit border-l border-t p-6 py-6 sm:ml-6">
@@ -92,20 +92,20 @@ export function Features() {
                                         <Users className="m-auto size-6" strokeWidth={1} />
                                     </div>
                                     <div className="space-y-2">
-                                        <h2 className="text-lg font-medium transition">Designed to Be Outgrown</h2>
-                                        <p className="text-muted-foreground">Unlike apps that maximize screen time, Artemis measures success by how quickly kids don't need it anymore.</p>
+                                        <h2 className="text-lg font-medium transition">Parent Dashboard</h2>
+                                        <p className="text-muted-foreground">Parents see exactly what their student is learning. Full session history, understanding metrics, and progress over time.</p>
                                     </div>
                                 </div>
                                 <div className="before:bg-(--color-border) relative mt-6 before:absolute before:inset-0 before:mx-auto before:w-px sm:-my-6 sm:-mr-6">
                                     <div className="relative flex h-full flex-col justify-center space-y-4 py-6">
                                         <div className="relative flex w-[calc(50%+0.875rem)] items-center justify-end gap-2">
-                                            <span className="block h-fit rounded border px-2 py-1 text-xs shadow-sm bg-primary/5">Struggle first</span>
+                                            <span className="block h-fit rounded border px-2 py-1 text-xs shadow-sm bg-primary/5">Sessions completed</span>
                                         </div>
                                         <div className="relative ml-[calc(50%-1rem)] flex items-center gap-2">
-                                            <span className="block h-fit rounded border px-2 py-1 text-xs shadow-sm bg-primary/5">Think it through</span>
+                                            <span className="block h-fit rounded border px-2 py-1 text-xs shadow-sm bg-primary/5">Concepts mastered</span>
                                         </div>
                                         <div className="relative flex w-[calc(50%+0.875rem)] items-center justify-end gap-2">
-                                            <span className="block h-fit rounded border px-2 py-1 text-xs shadow-sm bg-primary/5">Own the answer</span>
+                                            <span className="block h-fit rounded border px-2 py-1 text-xs shadow-sm bg-primary/5">Understanding rate</span>
                                         </div>
                                     </div>
                                 </div>

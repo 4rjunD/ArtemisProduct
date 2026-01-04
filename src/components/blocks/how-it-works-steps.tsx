@@ -2,17 +2,17 @@
 
 export function HowItWorksSteps() {
   return (
-    <section className="py-16 md:py-24 bg-muted/30">
+    <section id="how-it-works" className="py-16 md:py-24 bg-muted/30">
       <div className="mx-auto max-w-4xl px-6">
         <div className="text-center mb-16">
           <span className="text-primary text-sm font-medium uppercase tracking-wider">
-            Simple Process
+            How It Works
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl tracking-tight mt-3 mb-4">
-            Get Started in 3 Steps
+            Learn Any STEM Problem in 3 Steps
           </h2>
           <p className="text-muted-foreground text-lg">
-            No complicated setup. No learning curve. Just results.
+            No complicated setup. Just paste your homework and start learning.
           </p>
         </div>
 
@@ -26,9 +26,9 @@ export function HowItWorksSteps() {
               <div className="relative inline-flex items-center justify-center w-16 h-16 rounded-full bg-background border-2 border-primary mb-6">
                 <span className="font-serif text-2xl text-primary">1</span>
               </div>
-              <h3 className="font-serif text-xl mb-3">Create Their Profile</h3>
+              <h3 className="font-serif text-xl mb-3">Paste Your Problem</h3>
               <p className="text-muted-foreground text-sm">
-                Tell us their age and grade. We'll calibrate the difficulty to match where they are right now.
+                Upload any Math or Science homework question you're stuck on. Or browse topics to practice.
               </p>
             </div>
 
@@ -37,9 +37,9 @@ export function HowItWorksSteps() {
               <div className="relative inline-flex items-center justify-center w-16 h-16 rounded-full bg-background border-2 border-primary mb-6">
                 <span className="font-serif text-2xl text-primary">2</span>
               </div>
-              <h3 className="font-serif text-xl mb-3">They Solve Daily Challenges</h3>
+              <h3 className="font-serif text-xl mb-3">Get Guided, Not Given Answers</h3>
               <p className="text-muted-foreground text-sm">
-                Short, focused exercises that make them think. No answers given. Just guiding questions.
+                Our AI asks strategic questions that lead you to the solution. You do the thinking. We just guide.
               </p>
             </div>
 
@@ -48,9 +48,9 @@ export function HowItWorksSteps() {
               <div className="relative inline-flex items-center justify-center w-16 h-16 rounded-full bg-background border-2 border-primary mb-6">
                 <span className="font-serif text-2xl text-primary">3</span>
               </div>
-              <h3 className="font-serif text-xl mb-3">Watch Them Improve</h3>
+              <h3 className="font-serif text-xl mb-3">Actually Understand It</h3>
               <p className="text-muted-foreground text-sm">
-                Weekly reports show their progress. You'll see the difference in how they approach problems.
+                Explain the solution in your own words. That's how we know you learned it — and how you know too.
               </p>
             </div>
           </div>
@@ -58,7 +58,7 @@ export function HowItWorksSteps() {
 
         <div className="mt-12 text-center">
           <p className="text-sm text-muted-foreground">
-            Works for ages <strong className="text-foreground">6 to 18</strong>. Difficulty adapts automatically.
+            Works for <strong className="text-foreground">Math & Science</strong> at any level. Middle school to college.
           </p>
         </div>
       </div>
