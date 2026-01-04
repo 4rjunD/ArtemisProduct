@@ -261,4 +261,5 @@ function CreativePricing({
 }
 
 
-export { CreativePricing, PricingTier }
+export { CreativePricing };
+export type { PricingTier };
